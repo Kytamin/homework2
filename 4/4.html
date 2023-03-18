@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<p>nhập mảng</p><input id="inputarray" type="text"><input
+        type="button" value="kiểm tra" onclick="checkn()"><br>
+<p>nhập 1 số để kiểm tra</p>
+<input id="inputV" type="text">
+<p id="result"></p>
+</body>
+<script>
+    function checkn() {
+        let aray1 = document.getElementById("inputarray").value
+        let array = aray1.split(",")
+        // console.log(array)
+        let key = document.getElementById("inputV").value
+        let value = 0
+        for (let i = 0; i < array.length; i++) {
+            if (key === array[i]) {
+                value++
+            }
+        }
+        if (value === 0) {
+            alert(`${key} không thuộc mảng đã cho`)
+        }else if (value===1){
+            document.getElementById("result").innerHTML =`${key} là giá trị duy nhất không trùng lặp trong mảng `
+        }else if(value>=2){
+            document.getElementById("result").innerHTML =`giá trị${key} xuất hiện${value} lần trong mảng`
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let input = prompt("nhập vào mảng")
+    let array = input.split(',')
+    let array2 = array.sort(function (a, b) {
+        return b - a
+    })
+    alert(`${array2[1]} là giá trị lớn thứ 2 trong mảng`)
+</script>
+</html>
